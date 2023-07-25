@@ -9,11 +9,11 @@
     "types"
   ],
   "types": "./types/src/index.d.ts",
-  "author": "lianghonglei",
+  "author": "FranklinLia",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zycloud-ui/zycloud-ui.git"
+    "url": "git+https://github.com/FranklinLia/zycloud-ui.git"
   },
   "scripts": {
     "dev": "vite",

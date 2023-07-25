@@ -1,7 +1,7 @@
 <!--
  * @Author: LHL
  * @LastEditors: LHL
- * @LastEditTime : Do not edit
+ * @LastEditTime: 2023-07-25 11:25:18
 -->
 # ZYCLOUD UI
 
@@ -59,15 +59,3 @@ app.mount('#app')
 
 - [Element Plus](https://element-plus.org/zh-CN/) 感谢 Element Plus 提供的优秀组件库
 
-### License & Copyright
-
-Copyright (c) 2014-2023 飞致云 ZYCLOUD, All rights reserved.
-
-Licensed under The GNU General Public License version 3 (GPLv3)  (the "License"); you may not use this file except in
-compliance with the License. You may obtain a copy of the License at
-
-https://www.gnu.org/licenses/gpl-3.0.html
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "
-AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
-language governing permissions and limitations under the License.

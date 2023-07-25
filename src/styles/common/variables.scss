@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use "./mixins" as *;
+@use 'element-plus/theme-chalk/src/common/var.scss' as *;
+
+// zycloud ui variables
+$condition: () !default;
+$condition: map.deep-merge(
+    (
+      'color': #646A73,
+      'bgColor': #F5F6F7,
+    ),
+    $condition
+);
+
+$zy-search-bar: () !default;
+$zy-search-bar: map.deep-merge(
+    (
+      'width': 100%,
+      'height': 48px,
+      'condition-color': map-get($condition, "color"),
+      'condition-bgColor': map-get($condition, "bgColor"),
+    ),
+    $zy-search-bar
+);
+
+$zy-filter-bar: () !default;
+$zy-filter-bar: map.deep-merge(
+    (
+      'color': map-get($condition, "color"),
+      'drawer-color': map-get($condition, "color"),
+      'condition-color': map-get($condition, "color"),
+      'condition-bgColor': map-get($condition, "bgColor"),
+      'option-bgColor': map-get($condition, "bgColor"),
+      'option-hover-bgColor': rgba($color-primary, 10%),
+      'scroll-bgColor': mix(#000, map-get($condition, "bgColor"), 15%),
+    ),
+    $zy-filter-bar
+);
+
+$zy-icon-button: ('color': map-get($text-color, "primary")) !default;
+$zy-icon-button: map.deep-merge(
+    (
+      'bgColor': transparent,
+      'hover-color': map-get($zy-icon-button, "color"),
+      'hover-bgColor': rgba(map-get($zy-icon-button, "color"), 0.1),
+      'active-color': map-get($zy-icon-button, "color"),
+      'active-bgColor': rgba(map-get($zy-icon-button, "color"), 0.2),
+      'disabled-color': #BBBFC4,
+      'disabled-bgColor': transparent,
+      'gap': 12px,
+    ),
+    $zy-icon-button
+);
+
+:root {
+  // 遍历组件变量，例如: --zy-search-bar-{key}: {value}
+  @include set-component-css-var('search-bar', $zy-search-bar);
+  @include set-component-css-var('filter-bar', $zy-filter-bar);
+  @include set-component-css-var('icon-button', $zy-icon-button);
+}

@@ -1,0 +1,40 @@
+<template>
+  <div :class="['zy-search-conditions', 'zy-search-conditions--' + configSize]">
+    <div class="zy-search-conditions__item" v-for="(condition, index) in conditions">
+      <div v-if="condition.label">{{ condition.label }}</div>
+      <div class="condition-value">{{ condition.valueLabel }}</div>
+      <el-icon class="condition-remove" @click="remove(index)">
+        <Close/>
+      </el-icon>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import {PropType} from "vue";
+import {ComplexCondition} from "./types";
+import {validateSize} from "@/tools/size";
+import {useSize} from "@/hooks";
+
+defineOptions({name: "ZySearchConditions"});
+
+const props = defineProps({
+  size: {
+    type: String,
+    validator: validateSize
+  },
+  conditions: {
+    type: Array as PropType<ComplexCondition[]>,
+    required: true
+  }
+})
+
+const configSize = useSize()
+
+const emit = defineEmits<{ (e: 'change', conditions: Array<ComplexCondition>): void }>()
+
+function remove(index: number) {
+  props.conditions.splice(index, 1)
+  emit("change", props.conditions)
+}
+</script>

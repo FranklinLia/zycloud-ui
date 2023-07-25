@@ -1,0 +1,240 @@
+@use "../common/mixins.scss" as *;
+
+@include b(filter-bar) {
+  border-radius: 4px;
+  @include e(top) {
+    display: flex;
+    .top_left {
+      width: 50%;
+      display: flex;
+    }
+
+    .top_right {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+}
+
+@include b(filter-input) {
+  width: 240px;
+  .el-input__prefix, .el-input__suffix {
+    .el-input__icon {
+      color: var(--zy-filter-bar-color);
+      font-size: 14px
+    }
+  }
+}
+
+@include b(filter-button) {
+  margin-left: 12px;
+}
+
+@include b(filter) {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+
+  @include e(result) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    white-space: nowrap;
+  }
+
+  @include e(split) {
+    background-color: var(--zy-filter-bar-color);
+    height: 16px;
+    width: 1px;
+    margin: 2px 8px;
+  }
+  @include e(scroll) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 2px;
+
+    &:hover {
+      background: var(--zy-filter-bar-scroll-bgColor);
+      border-radius: 4px;
+    }
+
+    &:active {
+      transform: scale(0.9)
+    }
+  }
+  @include e(clear) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    min-width: 76px;
+    max-width: 76px;
+    color: var(--zy-filter-bar-color);
+    cursor: pointer;
+    margin-left: 6px;
+  }
+
+  @include e(drawer) {
+    .el-drawer__header {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      height: 56px;
+      padding: 16px 24px;
+      margin-bottom: 0;
+      border-bottom: 1px solid rgba(187, 191, 196, 0.5);
+      box-sizing: border-box;
+    }
+
+    .drawer-body {
+      position: absolute;
+      top: 56px;
+      bottom: 72px;
+      width: 100%;
+      padding: 12px 24px;
+      overflow-y: auto;
+    }
+
+    .drawer-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 72px;
+      right: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
+
+@include b(filter-conditions) {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  @include e(item) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px 6px;
+    box-sizing: border-box;
+    height: 24px;
+    background-color: var(--zy-filter-bar-condition-bgColor);
+    border-radius: 2px;
+    color: var(--zy-filter-bar-condition-color);
+
+    & + & {
+      margin-left: 8px;
+    }
+
+    .condition-text {
+      cursor: default;
+      font-size: 14px;
+      line-height: 22px;
+      height: 22px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+      max-width: 320px;
+      margin-right: 6px;
+    }
+  }
+}
+
+@include b(filter-component) {
+  display: flex;
+  min-height: 46px;
+
+  @include e(label) {
+    font-size: 14px;
+    line-height: 22px;
+    min-width: 122px;
+    margin: 12px 0;
+  }
+
+  @include e(content) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@include b(filter-component-popover) {
+  &.el-popover.el-popper {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    width: 240px;
+
+    .el-select {
+      width: 100%;
+    }
+  }
+}
+
+@include b(filter-option) {
+  display: flex;
+  align-items: center;
+  padding: 1px 6px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: var(--zy-filter-bar-option-bgColor);
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 6px;
+
+  &.is-selected, &:hover {
+    background-color: var(--zy-filter-bar-option-hover-bgColor);
+  }
+
+  &:active {
+    transform: scale(0.9)
+  }
+}
+
+@include b(filter-date) {
+  margin: 6px;
+  &.el-date-editor {
+    width: 100% !important;
+  }
+}
+
+@include b(filter-input-text) {
+  margin: 0 6px;
+  width: 100%;
+}
+
+@include b(filter-select) {
+  margin: 0 6px;
+  width: 100%;
+}
+
+@include b(scale-click) {
+  cursor: pointer;
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+  &:active {
+    transform: scale(0.9)
+  }
+}

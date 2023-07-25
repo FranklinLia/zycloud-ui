@@ -1,0 +1,56 @@
+<demo>表格选列</demo>
+<template>
+  <div style="margin-bottom: 20px">
+    <span>Popover选列(hover)：</span>
+    <zy-table-column-select :columns="columns" trigger="hover" title="自定义Title" popper-class="popper-class"/>
+    <span style="margin-left: 20px">Popover选列(click)：</span>
+    <zy-table-column-select :columns="columns"/>
+    <span style="margin-left: 20px">Dialog选列：</span>
+    <zy-table-column-select type="dialog" :columns="columns"/>
+  </div>
+  <zy-table :data="tableData" :columns="columns">
+    <el-table-column type="selection"></el-table-column>
+    <el-table-column prop="date" label="日期" min-width="180"></el-table-column>
+    <el-table-column prop="name" label="姓名" min-width="180"></el-table-column>
+    <el-table-column prop="address" label="地址" :show="false"></el-table-column>
+  </zy-table>
+
+</template>
+
+<script setup lang="ts">
+import {ref} from 'vue'
+
+const columns = ref([])
+
+const tableData = [
+  {
+    date: "2016-05-02",
+    name: "张三",
+    address: "北京朝阳区财富中心 0室",
+  },
+  {
+    date: "2016-05-04",
+    name: "张三",
+    address: "北京朝阳区财富中心 1室",
+  },
+  {
+    date: "2016-05-01",
+    name: "张三",
+    address: "北京朝阳区财富中心 2室",
+  },
+  {
+    date: "2016-05-03",
+    name: "张三",
+    address: "北京朝阳区财富中心 3室",
+  }
+]
+</script>
+
+<style lang="scss">
+// 不能用scoped，因为el-popover的样式是全局的
+.popper-class {
+  .zy-table-column-select-popper__body {
+    max-height: 80px;
+  }
+}
+</style>

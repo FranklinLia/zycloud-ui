@@ -1,6 +1,6 @@
 export default {
   name: 'en',
-  fu: {
+  zy: {
     filter_bar: {
       filter: "Filter",
       results: "Items",

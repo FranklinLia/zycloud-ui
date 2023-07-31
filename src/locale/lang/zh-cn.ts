@@ -1,6 +1,6 @@
 export default {
   name: 'zh-cn',
-  fu: {
+  zy: {
     filter_bar: {
       filter: "筛选",
       results: "个结果",

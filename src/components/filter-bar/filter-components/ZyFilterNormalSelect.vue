@@ -3,9 +3,9 @@
     <div class="zy-filter-component__label">{{ label }}</div>
     <div class="zy-filter-component__content">
       <el-select v-model="selection" v-bind="$attrs" :multiple="multiple" @change="change" :teleported="false"
-                 :size="configSize" :placeholder="t('fu.search_bar.please_select')" class="zy-filter-select">
+                 :size="configSize" :placeholder="t('zy.search_bar.please_select')" class="zy-filter-select">
         <el-option value="-$SELECT-ALL$-" v-if="showSelectAll">
-          <div @click="selectAll">{{ t('fu.filter_bar.select_all') }}</div>
+          <div @click="selectAll">{{ t('zy.filter_bar.select_all') }}</div>
         </el-option>
         <el-option :label="o.label" :value="o.value" v-for="o in options" :key="o.value"/>
       </el-select>

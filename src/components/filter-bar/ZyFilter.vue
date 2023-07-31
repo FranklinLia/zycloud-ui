@@ -1,6 +1,6 @@
 <template>
   <div class="zy-filter" ref="filterRef" v-show="show">
-    <div class="zy-filter__result">{{ count }} <span style="opacity: 0.6">{{ t('fu.filter_bar.results') }}</span>
+    <div class="zy-filter__result">{{ count }} <span style="opacity: 0.6">{{ t('zy.filter_bar.results') }}</span>
     </div>
     <div class="zy-filter__split"/>
 
@@ -22,11 +22,11 @@
       <el-icon>
         <Delete/>
       </el-icon>
-      {{ t('fu.filter_bar.clear') }}
+      {{ t('zy.filter_bar.clear') }}
     </div>
   </div>
 
-  <el-drawer :size="drawerWidth" class="zy-filter__drawer" :title="t('fu.filter_bar.drawer_title')"
+  <el-drawer :size="drawerWidth" class="zy-filter__drawer" :title="t('zy.filter_bar.drawer_title')"
              v-model="drawer" @open="initComponents">
     <div class="drawer-body">
       <slot>
@@ -35,8 +35,8 @@
     </div>
     <div class="drawer-footer">
       <slot name="footer">
-        <el-button :size="size" @click="drawer = false">{{ t('fu.filter_bar.cancel') }}</el-button>
-        <el-button :size="size" type="primary" @click="filter">{{ t('fu.filter_bar.search') }}</el-button>
+        <el-button :size="size" @click="drawer = false">{{ t('zy.filter_bar.cancel') }}</el-button>
+        <el-button :size="size" type="primary" @click="filter">{{ t('zy.filter_bar.search') }}</el-button>
       </slot>
     </div>
   </el-drawer>

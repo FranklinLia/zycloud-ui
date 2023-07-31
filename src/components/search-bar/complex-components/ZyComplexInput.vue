@@ -2,7 +2,7 @@
   <div class="zy-complex-component">
     <div class="zy-complex-component__label">{{ label }}</div>
     <div class="zy-complex-component__content">
-      <el-input v-model="inputValue" :placeholder="t('fu.search_bar.please_input')" :size="configSize" v-bind="$attrs"/>
+      <el-input v-model="inputValue" :placeholder="t('zy.search_bar.please_input')" :size="configSize" v-bind="$attrs"/>
     </div>
   </div>
 </template>

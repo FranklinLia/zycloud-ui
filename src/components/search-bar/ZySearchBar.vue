@@ -11,9 +11,9 @@
     </div>
     <div class="zy-search-bar__buttons">
       <slot name="buttons">
-        <zy-search-bar-button icon="Close" @click="clean" :size="configSize" :tooltip="t('fu.search_bar.clean')"
+        <zy-search-bar-button icon="Close" @click="clean" :size="configSize" :tooltip="t('zy.search_bar.clean')"
                               v-if="showClean"/>
-        <zy-search-bar-button icon="Refresh" @click="refresh" :size="configSize" :tooltip="t('fu.search_bar.refresh')"
+        <zy-search-bar-button icon="Refresh" @click="refresh" :size="configSize" :tooltip="t('zy.search_bar.refresh')"
                               v-if="showRefresh"/>
         <slot></slot>
       </slot>
@@ -64,7 +64,7 @@ provide(referenceKey, references)
 const configSize = useSize()
 
 const placeholder = computed(() => {
-  return props.quickPlaceholder ? props.quickPlaceholder : t('fu.search_bar.search')
+  return props.quickPlaceholder ? props.quickPlaceholder : t('zy.search_bar.search')
 })
 
 const showComplex = computed(() => {

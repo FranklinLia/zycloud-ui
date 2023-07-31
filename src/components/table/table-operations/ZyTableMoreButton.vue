@@ -5,7 +5,7 @@
         <MoreFilled />
       </el-icon>
       <template v-else>
-        {{ t('fu.table.more') }}
+        {{ t('zy.table.more') }}
       </template>
     </el-button>
     <template #dropdown>

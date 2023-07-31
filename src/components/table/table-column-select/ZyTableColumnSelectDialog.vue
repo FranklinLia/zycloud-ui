@@ -1,13 +1,13 @@
 <template>
   <div style="display: inline-block">
-    <el-button class="zy-search-bar-button" :icon="icon" @click="visible = true">{{ t('fu.table.custom_table_rows') }}
+    <el-button class="zy-search-bar-button" :icon="icon" @click="visible = true">{{ t('zy.table.custom_table_rows') }}
     </el-button>
     <el-dialog class="zy-table-column-select-dialog" v-model="visible" @open="open" append-to-body>
       <template #header>
         <h3>
           {{ header }}
         </h3>
-        <el-alert :title="t('fu.table.custom_table_fields_desc')" type="info" :closable="false"/>
+        <el-alert :title="t('zy.table.custom_table_fields_desc')" type="info" :closable="false"/>
       </template>
 
       <el-checkbox v-for="(c, i) in cloneColumns" :key="i" v-model="c.show" :checked="c.show !== false" draggable="true"
@@ -18,10 +18,10 @@
 
       <template #footer>
         <el-button @click="reset" v-if="columnsKey">
-          {{ t('fu.table.reset') }}
+          {{ t('zy.table.reset') }}
         </el-button>
         <el-button type="primary" @click="ok">
-          {{ t('fu.table.ok') }}
+          {{ t('zy.table.ok') }}
         </el-button>
       </template>
     </el-dialog>
@@ -75,7 +75,7 @@ const cloneColumns = ref([]) as any
 const visible = ref(false)
 
 const header = computed(() => {
-  return props.title || t('fu.table.custom_table_fields')
+  return props.title || t('zy.table.custom_table_fields')
 });
 
 function open() {

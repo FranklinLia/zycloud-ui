@@ -3,7 +3,7 @@
     <div class="zy-complex-component__label">{{ label }}</div>
     <div class="zy-complex-component__content">
       <el-select class="zy-complex-select"
-                 :placeholder="t('fu.search_bar.please_select')"
+                 :placeholder="t('zy.search_bar.please_select')"
                  v-model="selection"
                  :size="configSize"
                  v-bind="$attrs"

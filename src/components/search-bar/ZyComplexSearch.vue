@@ -7,8 +7,8 @@
         </slot>
       </div>
       <div class="zy-complex-components__footer">
-        <el-button @click="close" :size="configSize">{{ t('fu.search_bar.cancel') }}</el-button>
-        <el-button type="primary" @click="ok" :size="configSize">{{ t('fu.search_bar.ok') }}</el-button>
+        <el-button @click="close" :size="configSize">{{ t('zy.search_bar.cancel') }}</el-button>
+        <el-button type="primary" @click="ok" :size="configSize">{{ t('zy.search_bar.ok') }}</el-button>
       </div>
     </div>
     <template #reference>

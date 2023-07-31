@@ -8,7 +8,7 @@
         <slot name="tr" :condition="conditionObj">
           <zy-filter-input :size="configSize" v-model="quick" :placeholder="quickPlaceholder" @change="change"/>
         </slot>
-        <el-button class="zy-filter-button" @click="open" icon="Filter" :size="configSize">{{ t('fu.filter_bar.filter') }}
+        <el-button class="zy-filter-button" @click="open" icon="Filter" :size="configSize">{{ t('zy.filter_bar.filter') }}
           <span v-if="conditions.length > 0">({{ conditions.length }})</span>
         </el-button>
 

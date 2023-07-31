@@ -4,10 +4,10 @@
     <div class="zy-filter-component__content">
       <!-- :size="configSize"  -->
       <el-date-picker class="zy-filter-date" v-model="value" v-bind="$attrs" :size="configSize"
-                      :placeholder="t('fu.search_bar.select_date_time')" type="datetimerange"
+                      :placeholder="t('zy.search_bar.select_date_time')" type="datetimerange"
                       :value-format="valueFormat"
-                      :start-placeholder="t('fu.search_bar.start_date_time')"
-                      :end-placeholder="t('fu.search_bar.end_date_time')">
+                      :start-placeholder="t('zy.search_bar.start_date_time')"
+                      :end-placeholder="t('zy.search_bar.end_date_time')">
       </el-date-picker>
     </div>
   </div>

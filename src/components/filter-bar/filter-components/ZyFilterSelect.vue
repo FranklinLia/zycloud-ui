@@ -6,9 +6,9 @@
       <el-popover popper-class="zy-filter-component-popover" :show-arrow="false" placement="bottom-start"
                   trigger="click" width="240" v-if="showMore">
         <el-select v-model="selection" v-bind="$attrs" :multiple="multiple" @change="change" :teleported="false"
-                   :size="configSize" :placeholder="t('fu.search_bar.please_select')">
+                   :size="configSize" :placeholder="t('zy.search_bar.please_select')">
           <el-option value="-$SELECT-ALL$-" v-if="showSelectAll">
-            <div @click="selectAll">{{ t('fu.filter_bar.select_all') }}</div>
+            <div @click="selectAll">{{ t('zy.filter_bar.select_all') }}</div>
           </el-option>
           <el-option :label="o.label" :value="o.value" v-for="o in options" :key="o.value"/>
         </el-select>
@@ -17,7 +17,7 @@
             <el-icon>
               <Plus/>
             </el-icon>
-            {{ t('fu.filter_bar.more') }}
+            {{ t('zy.filter_bar.more') }}
           </div>
         </template>
       </el-popover>

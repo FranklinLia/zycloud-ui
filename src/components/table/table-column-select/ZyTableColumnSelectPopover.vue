@@ -15,12 +15,12 @@
     </div>
     <div class="zy-table-column-select-popper__footer">
       <el-button @click="reset" v-if="columnsKey">
-        {{ t('fu.table.reset') }}
+        {{ t('zy.table.reset') }}
       </el-button>
     </div>
 
     <template #reference>
-      <el-button class="zy-search-bar-button" :icon="icon">{{ t('fu.table.custom_table_rows') }}</el-button>
+      <el-button class="zy-search-bar-button" :icon="icon">{{ t('zy.table.custom_table_rows') }}</el-button>
     </template>
   </el-popover>
 </template>
@@ -79,7 +79,7 @@ const hasSelect = computed(() => {
 });
 
 const header = computed(() => {
-  return props.title || t('fu.table.custom_table_fields')
+  return props.title || t('zy.table.custom_table_fields')
 });
 
 function reset() {
